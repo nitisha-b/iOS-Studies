@@ -1,49 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="iOSTest" customModuleProvider="target">
             <connections>
+                <outlet property="animationButton" destination="jya-WD-Yn8" id="pjF-r8-qRy"/>
+                <outlet property="chatButton" destination="Tqi-Rn-KSl" id="Mf1-Xg-mvI"/>
+                <outlet property="loginButton" destination="ydM-uD-f5n" id="X3M-kl-nKn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqi-Rn-KSl">
-                    <rect key="frame" x="171" y="241" width="33" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Chat"/>
-                    <connections>
-                        <action selector="chat:" destination="-1" eventType="touchUpInside" id="BSN-ed-RxJ"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jya-WD-Yn8">
-                    <rect key="frame" x="153" y="346" width="69" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Animation"/>
-                    <connections>
-                        <action selector="animation:" destination="-1" eventType="touchUpInside" id="qr9-B1-Qea"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydM-uD-f5n">
-                    <rect key="frame" x="168" y="291" width="38" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Login"/>
-                    <connections>
-                        <action selector="login:" destination="-1" eventType="touchUpInside" id="4UX-2a-upP"/>
-                    </connections>
-                </button>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k2-hO-o8h">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                </navigationBar>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bg_home_menu" translatesAutoresizingMaskIntoConstraints="NO" id="xTt-Fk-YgG">
+                    <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="lK6-UI-sHq">
+                    <rect key="frame" x="30" y="227" width="354" height="282"/>
+                    <subviews>
+                        <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqi-Rn-KSl">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="78"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <state key="normal" title="CHAT" image="ic_chat">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="chat:" destination="-1" eventType="touchUpInside" id="BSN-ed-RxJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydM-uD-f5n">
+                            <rect key="frame" x="0.0" y="102" width="354" height="78"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <state key="normal" title="LOGIN" image="ic_login">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="login:" destination="-1" eventType="touchUpInside" id="4UX-2a-upP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jya-WD-Yn8">
+                            <rect key="frame" x="0.0" y="204" width="354" height="78"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <state key="normal" title="ANIMATION" image="ic_animation">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="animation:" destination="-1" eventType="touchUpInside" id="qr9-B1-Qea"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0k2-hO-o8h" secondAttribute="trailing" id="1Hl-mT-3IV"/>
+                <constraint firstItem="xTt-Fk-YgG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4BJ-T4-xju"/>
+                <constraint firstAttribute="trailing" secondItem="lK6-UI-sHq" secondAttribute="trailing" constant="30" id="7un-zW-PFp"/>
+                <constraint firstItem="lK6-UI-sHq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="227" id="7v2-LV-xgc"/>
+                <constraint firstItem="xTt-Fk-YgG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Hjq-ek-GiG"/>
+                <constraint firstItem="0k2-hO-o8h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IYb-mQ-e9T"/>
+                <constraint firstItem="lK6-UI-sHq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="QlD-rw-RzV"/>
+                <constraint firstAttribute="trailing" secondItem="xTt-Fk-YgG" secondAttribute="trailing" id="XAd-OQ-EMg"/>
+                <constraint firstAttribute="bottom" secondItem="xTt-Fk-YgG" secondAttribute="bottom" id="Yjl-nS-3F8"/>
+                <constraint firstAttribute="bottom" secondItem="lK6-UI-sHq" secondAttribute="bottom" constant="227" id="kyO-X8-tnz"/>
+                <constraint firstItem="xTt-Fk-YgG" firstAttribute="top" secondItem="0k2-hO-o8h" secondAttribute="bottom" id="lR5-YA-MGK"/>
+                <constraint firstItem="0k2-hO-o8h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ltx-VA-0pK"/>
+            </constraints>
             <point key="canvasLocation" x="552.17391304347825" y="313.39285714285711"/>
         </view>
     </objects>
+    <resources>
+        <image name="bg_home_menu" width="375" height="667"/>
+        <image name="ic_animation" width="23" height="24"/>
+        <image name="ic_chat" width="24" height="24"/>
+        <image name="ic_login" width="24" height="24"/>
+    </resources>
 </document>
