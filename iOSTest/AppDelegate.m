@@ -32,6 +32,9 @@
     
     [[UINavigationBar appearance] setTintColor: [UIColor whiteColor]];
     
+    // Change the title color to white
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    
     return YES;
 }
 
