@@ -33,6 +33,8 @@ class LoginViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Login"
     }
     
     // MARK: - Actions
