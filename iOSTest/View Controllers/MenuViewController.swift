@@ -69,7 +69,11 @@ class MenuViewController: UIViewController {
         navigationController?.pushViewController(chatViewController, animated: true)
     }
     @IBAction func login(_ sender: UIButton) {
+        let loginViewController = LoginViewController()
+        navigationController?.pushViewController(loginViewController, animated: true)
     }
     @IBAction func animation(_ sender: UIButton) {
+        let animationViewController = AnimationViewController()
+        navigationController?.pushViewController(animationViewController, animated: true)
     }
 }
