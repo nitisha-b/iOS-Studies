@@ -26,6 +26,12 @@
     
     self.window.rootViewController = self.navController;
 
+    // Set the Navigation Bar properties
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:14.0/255.0 green:92.0/255.0 blue:137.0/255.0 alpha:1.0]];
+    
+    [[UINavigationBar appearance] setTintColor: [UIColor whiteColor]];
+    
     return YES;
 }
 
