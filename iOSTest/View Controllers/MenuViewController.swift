@@ -26,11 +26,13 @@ class MenuViewController: UIViewController {
     
     
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         title = "Coding Tasks"
+        
+        formatButtons()
     }
     
     // MARK: - Actions
@@ -42,5 +44,15 @@ class MenuViewController: UIViewController {
     @IBAction func login(_ sender: UIButton) {
     }
     @IBAction func animation(_ sender: UIButton) {
+    }
+    
+    // MARK: - Additional Functions
+    
+    func formatButtons() {
+        
+        // Round corners of buttons
+        chatButton.layer.cornerRadius = 10.0
+        loginButton.layer.cornerRadius = 10.0
+        animationButton.layer.cornerRadius = 10.0
     }
 }
