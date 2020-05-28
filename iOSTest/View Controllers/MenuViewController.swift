@@ -30,6 +30,7 @@ class MenuViewController: UIViewController {
         
         super.viewDidLoad()
         
+        title = "Coding Tasks"
     }
     
     // MARK: - Actions
