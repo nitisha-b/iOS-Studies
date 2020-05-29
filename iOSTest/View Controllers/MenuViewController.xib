@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -23,17 +23,18 @@
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k2-hO-o8h">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                 </navigationBar>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bg_home_menu" id="xTt-Fk-YgG">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bg_home_menu" translatesAutoresizingMaskIntoConstraints="NO" id="xTt-Fk-YgG">
                     <rect key="frame" x="0.0" y="64" width="414" height="832"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" id="vWx-40-bHh">
-                    <rect key="frame" x="30" y="227" width="354" height="213"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vWx-40-bHh">
+                    <rect key="frame" x="30" y="342" width="354" height="213"/>
                     <subviews>
                         <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kr4-fg-LwF">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="55"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="eqw-bs-8md"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                             <inset key="titleEdgeInsets" minX="38" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="22" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -47,6 +48,9 @@
                         <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygW-fg-v89">
                             <rect key="frame" x="0.0" y="79" width="354" height="55"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="r8y-Wv-Xfq"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                             <inset key="titleEdgeInsets" minX="38" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="22" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -60,6 +64,9 @@
                         <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7y1-H6-0kd">
                             <rect key="frame" x="0.0" y="158" width="354" height="55"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="Mda-yz-wza"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                             <inset key="titleEdgeInsets" minX="38" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="22" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -80,10 +87,9 @@
                 <constraint firstAttribute="trailing" secondItem="vWx-40-bHh" secondAttribute="trailing" constant="30" id="DSY-pB-S56"/>
                 <constraint firstItem="xTt-Fk-YgG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Hjq-ek-GiG"/>
                 <constraint firstItem="0k2-hO-o8h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IYb-mQ-e9T"/>
+                <constraint firstItem="vWx-40-bHh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="T8e-Yp-k8K"/>
                 <constraint firstAttribute="trailing" secondItem="xTt-Fk-YgG" secondAttribute="trailing" id="XAd-OQ-EMg"/>
                 <constraint firstAttribute="bottom" secondItem="xTt-Fk-YgG" secondAttribute="bottom" id="Yjl-nS-3F8"/>
-                <constraint firstAttribute="bottom" secondItem="vWx-40-bHh" secondAttribute="bottom" constant="227" id="cHG-PW-RUJ"/>
-                <constraint firstItem="vWx-40-bHh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="227" id="htr-FV-Es8"/>
                 <constraint firstItem="xTt-Fk-YgG" firstAttribute="top" secondItem="0k2-hO-o8h" secondAttribute="bottom" id="lR5-YA-MGK"/>
                 <constraint firstItem="0k2-hO-o8h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ltx-VA-0pK"/>
                 <constraint firstItem="vWx-40-bHh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="nIC-mu-mUW"/>
