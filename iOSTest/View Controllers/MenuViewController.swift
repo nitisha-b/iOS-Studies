@@ -61,17 +61,5 @@ class MenuViewController: UIViewController {
         chatButton.layer.cornerRadius = 10.0
         loginButton.layer.cornerRadius = 10.0
         animationButton.layer.cornerRadius = 10.0
-        
-        let imageSpacing = CGFloat(22.0)
-        let titleSpacing = CGFloat(16.0)
-        let netTitleSpacing = imageSpacing + titleSpacing
-        
-        // Add padding to the title and image for all buttons
-        chatButton.imageEdgeInsets = UIEdgeInsets(top:0.0, left: imageSpacing, bottom: 0.0, right: 0.0)
-        chatButton.titleEdgeInsets = UIEdgeInsets(top:0.0, left: netTitleSpacing, bottom:0.0, right: 0.0)
-        loginButton.imageEdgeInsets = UIEdgeInsets(top:0.0, left: imageSpacing, bottom: 0.0, right: 0.0)
-        loginButton.titleEdgeInsets = UIEdgeInsets(top:0.0, left: netTitleSpacing, bottom:0.0, right: 0.0)
-        animationButton.imageEdgeInsets = UIEdgeInsets(top:0.0, left: imageSpacing, bottom: 0.0, right: 0.0)
-        animationButton.titleEdgeInsets = UIEdgeInsets(top:0.0, left: netTitleSpacing, bottom:0.0, right: 0.0)
     }
 }
