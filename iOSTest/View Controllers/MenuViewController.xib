@@ -20,88 +20,122 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_home_menu" translatesAutoresizingMaskIntoConstraints="NO" id="ujJ-pB-gqs" userLabel="Background Image">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="yPb-0y-PoT" userLabel="Entire Stack View">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Xj2-wH-1Vo" userLabel="Entire Stack View">
                     <rect key="frame" x="30" y="227" width="315" height="213"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0wk-lA-Zce" userLabel="Chat Stack View">
-                            <rect key="frame" x="22" y="0.0" width="271" height="55"/>
+                        <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-X7-Gvm" userLabel="Chat View Container">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="55"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_chat" translatesAutoresizingMaskIntoConstraints="NO" id="Kuf-nx-tet">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="55"/>
-                                </imageView>
-                                <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqi-Rn-KSl">
-                                    <rect key="frame" x="40" y="0.0" width="231" height="55"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="55" id="W6X-od-6uj"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                    <state key="normal" title="CHAT">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="chat:" destination="-1" eventType="touchUpInside" id="BSN-ed-RxJ"/>
-                                    </connections>
-                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0wk-lA-Zce" userLabel="Chat Stack View">
+                                    <rect key="frame" x="22" y="0.0" width="293" height="55"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_chat" translatesAutoresizingMaskIntoConstraints="NO" id="Kuf-nx-tet">
+                                            <rect key="frame" x="0.0" y="0.0" width="24" height="55"/>
+                                        </imageView>
+                                        <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqi-Rn-KSl">
+                                            <rect key="frame" x="40" y="0.0" width="253" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="W6X-od-6uj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <state key="normal" title="CHAT">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="chat:" destination="-1" eventType="touchUpInside" id="BSN-ed-RxJ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1Rh-LH-xsE" userLabel="Login Stack View">
-                            <rect key="frame" x="22" y="79" width="271" height="55"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="58t-sh-odW"/>
+                                <constraint firstItem="0wk-lA-Zce" firstAttribute="leading" secondItem="R5J-X7-Gvm" secondAttribute="leading" constant="22" id="A6e-bQ-b3Z"/>
+                                <constraint firstAttribute="bottom" secondItem="0wk-lA-Zce" secondAttribute="bottom" id="BRd-Nd-yv7"/>
+                                <constraint firstItem="0wk-lA-Zce" firstAttribute="top" secondItem="R5J-X7-Gvm" secondAttribute="top" id="fL1-jE-Dnt"/>
+                                <constraint firstAttribute="trailing" secondItem="0wk-lA-Zce" secondAttribute="trailing" id="sA6-QE-yTS"/>
+                            </constraints>
+                        </view>
+                        <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hv-Iu-ysy" userLabel="Login View Container">
+                            <rect key="frame" x="0.0" y="79" width="315" height="55"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_login" translatesAutoresizingMaskIntoConstraints="NO" id="UaN-es-pGm">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="55"/>
-                                </imageView>
-                                <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-X9-cWo">
-                                    <rect key="frame" x="40" y="0.0" width="231" height="55"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="55" id="wn0-ek-RcD"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                    <state key="normal" title="LOGIN">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="chat:" destination="-1" eventType="touchUpInside" id="tgW-eR-Bpn"/>
-                                    </connections>
-                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1Rh-LH-xsE" userLabel="Login Stack View">
+                                    <rect key="frame" x="22" y="0.0" width="293" height="55"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_login" translatesAutoresizingMaskIntoConstraints="NO" id="UaN-es-pGm">
+                                            <rect key="frame" x="0.0" y="0.0" width="24" height="55"/>
+                                        </imageView>
+                                        <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfd-X9-cWo">
+                                            <rect key="frame" x="40" y="0.0" width="253" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="wn0-ek-RcD"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <state key="normal" title="LOGIN">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="chat:" destination="-1" eventType="touchUpInside" id="tgW-eR-Bpn"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-mM-cP7" userLabel="Animation Stack View">
-                            <rect key="frame" x="22" y="158" width="271" height="55"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="1Rh-LH-xsE" secondAttribute="bottom" id="3JK-qQ-cXl"/>
+                                <constraint firstAttribute="trailing" secondItem="1Rh-LH-xsE" secondAttribute="trailing" id="8Q1-Iu-XiF"/>
+                                <constraint firstItem="1Rh-LH-xsE" firstAttribute="leading" secondItem="6hv-Iu-ysy" secondAttribute="leading" constant="22" id="8xW-nt-w8l"/>
+                                <constraint firstItem="1Rh-LH-xsE" firstAttribute="top" secondItem="6hv-Iu-ysy" secondAttribute="top" id="cmz-Jz-oo7"/>
+                                <constraint firstAttribute="height" constant="55" id="qWr-rj-CK2"/>
+                            </constraints>
+                        </view>
+                        <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-RD-Pts" userLabel="Animation View Container">
+                            <rect key="frame" x="0.0" y="158" width="315" height="55"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_animation" translatesAutoresizingMaskIntoConstraints="NO" id="wlP-38-FM8">
-                                    <rect key="frame" x="0.0" y="0.0" width="23" height="55"/>
-                                </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdP-9D-yqM">
-                                    <rect key="frame" x="39" y="0.0" width="232" height="55"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="55" id="zNs-w2-vqj"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                    <state key="normal" title="ANIMATION">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="chat:" destination="-1" eventType="touchUpInside" id="i6P-IJ-iac"/>
-                                    </connections>
-                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-mM-cP7" userLabel="Animation Stack View">
+                                    <rect key="frame" x="22" y="0.0" width="293" height="55"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_animation" translatesAutoresizingMaskIntoConstraints="NO" id="wlP-38-FM8">
+                                            <rect key="frame" x="0.0" y="0.0" width="23" height="55"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdP-9D-yqM">
+                                            <rect key="frame" x="39" y="0.0" width="254" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="zNs-w2-vqj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <state key="normal" title="ANIMATION">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="chat:" destination="-1" eventType="touchUpInside" id="i6P-IJ-iac"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
-                        </stackView>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="rdE-mM-cP7" firstAttribute="top" secondItem="YgL-RD-Pts" secondAttribute="top" id="FFw-db-4do"/>
+                                <constraint firstAttribute="trailing" secondItem="rdE-mM-cP7" secondAttribute="trailing" id="GNs-SD-7qQ"/>
+                                <constraint firstItem="rdE-mM-cP7" firstAttribute="leading" secondItem="YgL-RD-Pts" secondAttribute="leading" constant="22" id="UaV-wn-tCI"/>
+                                <constraint firstAttribute="bottom" secondItem="rdE-mM-cP7" secondAttribute="bottom" id="eCF-Wj-POC"/>
+                                <constraint firstAttribute="height" constant="55" id="vFr-3U-GdB"/>
+                            </constraints>
+                        </view>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="1Rh-LH-xsE" firstAttribute="leading" secondItem="yPb-0y-PoT" secondAttribute="leading" constant="22" id="dSi-hW-Nvl"/>
-                        <constraint firstItem="rdE-mM-cP7" firstAttribute="leading" secondItem="yPb-0y-PoT" secondAttribute="leading" constant="22" id="ncm-6I-z4q"/>
-                        <constraint firstItem="0wk-lA-Zce" firstAttribute="leading" secondItem="yPb-0y-PoT" secondAttribute="leading" constant="22" id="viY-qL-GaU"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="yPb-0y-PoT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4NW-Hl-vx1"/>
                 <constraint firstAttribute="trailing" secondItem="ujJ-pB-gqs" secondAttribute="trailing" id="D11-Aj-4KB"/>
                 <constraint firstItem="ujJ-pB-gqs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KK4-sZ-bgh"/>
-                <constraint firstItem="yPb-0y-PoT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="UJq-Dm-NKu"/>
-                <constraint firstAttribute="trailing" secondItem="yPb-0y-PoT" secondAttribute="trailing" constant="30" id="Y9o-G2-NtH"/>
                 <constraint firstAttribute="bottom" secondItem="ujJ-pB-gqs" secondAttribute="bottom" id="Ydt-NM-iEZ"/>
+                <constraint firstAttribute="trailing" secondItem="Xj2-wH-1Vo" secondAttribute="trailing" constant="30" id="bSI-hd-caj"/>
+                <constraint firstItem="Xj2-wH-1Vo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="bcM-HV-Chp"/>
+                <constraint firstItem="Xj2-wH-1Vo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cDL-ny-3L5"/>
                 <constraint firstItem="ujJ-pB-gqs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pHm-Lw-kxg"/>
             </constraints>
             <point key="canvasLocation" x="551.20000000000005" y="312.59370314842579"/>
