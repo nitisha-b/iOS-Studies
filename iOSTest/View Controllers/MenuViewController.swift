@@ -25,6 +25,9 @@ class MenuViewController: UIViewController {
     // MARK: - Outlets
     
     
+    @IBOutlet weak var chatButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var animationButton: UIButton!
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
