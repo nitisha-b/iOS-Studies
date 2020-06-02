@@ -29,37 +29,13 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var animationButton: UIButton!
     
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         title = "Coding Tasks"
         
-        // Round the corners of all buttons
-        chatButton.layer.cornerRadius = 10.0
-        loginButton.layer.cornerRadius = 10.0
-        animationButton.layer.cornerRadius = 10.0
-        
-        // Set the button insets
-        
-        let imageSpacing = CGFloat(22.0)
-        let titleSpacing = CGFloat(16.0)
-        let netTitleSpacing = imageSpacing + titleSpacing
-        
-        // Add padding to the chat button
-        chatButton.imageEdgeInsets = UIEdgeInsets(top:0.0, left: imageSpacing, bottom: 0.0, right: 0.0)
-        
-        chatButton.titleEdgeInsets = UIEdgeInsets(top:0.0, left: netTitleSpacing, bottom:0.0, right: 0.0)
-        
-        // Add padding to the login button
-        loginButton.imageEdgeInsets = UIEdgeInsets(top:0.0, left: imageSpacing, bottom: 0.0, right: 0.0)
-        
-        loginButton.titleEdgeInsets = UIEdgeInsets(top:0.0, left: netTitleSpacing, bottom:0.0, right: 0.0)
-        
-        // Add padding to the animation button
-        animationButton.imageEdgeInsets = UIEdgeInsets(top:0.0, left: imageSpacing, bottom: 0.0, right: 0.0)
-               
-        animationButton.titleEdgeInsets = UIEdgeInsets(top:0.0, left: netTitleSpacing, bottom:0.0, right: 0.0)
+        formatButtons()
     }
     
     // MARK: - Actions
@@ -75,5 +51,15 @@ class MenuViewController: UIViewController {
     @IBAction func animation(_ sender: UIButton) {
         let animationViewController = AnimationViewController()
         navigationController?.pushViewController(animationViewController, animated: true)
+    }
+    
+    // MARK: - Additional Functions
+    
+    func formatButtons() {
+        
+        // Round the corners of all buttons
+        chatButton.layer.cornerRadius = 10.0
+        loginButton.layer.cornerRadius = 10.0
+        animationButton.layer.cornerRadius = 10.0
     }
 }
