@@ -57,7 +57,7 @@ class MenuViewController: UIViewController {
     
     func formatButtons() {
         
-        // Round the corners of all buttons
+        // Round corners of buttons
         chatButton.layer.cornerRadius = 10.0
         loginButton.layer.cornerRadius = 10.0
         animationButton.layer.cornerRadius = 10.0
