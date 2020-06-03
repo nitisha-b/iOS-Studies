@@ -24,12 +24,15 @@ class MenuViewController: UIViewController {
     
     // MARK: - Outlets
     
+    @IBOutlet weak var chatView: UIView!
+    @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var animationView: UIView!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        roundViewCorners()
     }
     
     // MARK: - Actions
@@ -42,4 +45,11 @@ class MenuViewController: UIViewController {
     }
     @IBAction func animation(_ sender: UIButton) {
     }
+    
+    func roundViewCorners(){
+        chatView.layer.cornerRadius = 10.0
+        loginView.layer.cornerRadius = 10.0
+        animationView.layer.cornerRadius = 10.0
+    }
+    
 }

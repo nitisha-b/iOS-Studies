@@ -9,6 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="iOSTest" customModuleProvider="target">
             <connections>
+                <outlet property="animationView" destination="YgL-RD-Pts" id="RUo-E5-vSq"/>
+                <outlet property="chatView" destination="R5J-X7-Gvm" id="XoY-qy-jtZ"/>
+                <outlet property="loginView" destination="6hv-Iu-ysy" id="Fi8-zf-ZaH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
