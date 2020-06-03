@@ -15,8 +15,8 @@ class LoginViewController: UIViewController {
      *
      * 2) Take username and password input from the user using UITextFields
      *
-     * 3) A valid email is 'info@datechnologies.co'
-     *    A valid password is 'Test123'
+     * 3) A valid email is 'user@iosstudies.co'
+     *    A valid password is 'pinksalmon'
      *
      * 4) Calculate how long the function call took in milliseconds
      *
