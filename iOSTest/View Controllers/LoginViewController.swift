@@ -28,6 +28,10 @@ class LoginViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
+    
+    @IBOutlet weak var usernameView: UIView!
+    @IBOutlet weak var passwordView: UIView!
+    
     private var client = LoginClient()
     
     // MARK: - Lifecycle
@@ -35,12 +39,18 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Login"
+        roundViewCorners()
     }
     
     // MARK: - Actions
     
     @IBAction func didPressLoginButton(_ sender: Any) {
         
+    }
+    
+    func roundViewCorners(){
+        usernameView.layer.cornerRadius = 5.0
+        passwordView.layer.cornerRadius = 5.0
     }
     
 }
