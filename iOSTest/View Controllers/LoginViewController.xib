@@ -74,7 +74,7 @@
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNN-sf-pf9">
                             <rect key="frame" x="0.0" y="158" width="354" height="55"/>
-                            <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.054901960784313725" green="0.36078431372549019" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="Z1r-yS-lBL"/>
                             </constraints>
