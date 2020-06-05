@@ -34,6 +34,7 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Coding Tasks"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         formatButtons()
     }
