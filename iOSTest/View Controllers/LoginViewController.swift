@@ -28,13 +28,15 @@ class LoginViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var usernameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
-    
     @IBOutlet weak var usernameView: UIView!
     @IBOutlet weak var passwordView: UIView!
     
     private var client = LoginClient()
     var username:String?
     var password:String?
+    let validUsername = "user@iosstudies.co"
+    let validPassword = "pinksalmon"
+    var runtime = 0
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -44,24 +46,19 @@ class LoginViewController: UIViewController {
         roundViewCorners()
     }
     
-    // MARK: - Actions
+    // MARK: - IBActions
     
     @IBAction func didPressLoginButton(_ sender: Any) {
         
         let startTime = CACurrentMediaTime()
-        
-        username = usernameTextfield.text
-        password = passwordTextfield.text
-        
+    
         validateUsernameAndPassword()
         
         let endTime = CACurrentMediaTime()
-        let runtime = endTime - startTime
-        print("Runtime: \(runtime)")
-        
+        runtime = Int(endTime - startTime)
     }
     
-    // MARK: - Additional Functions
+    // MARK: - Actions
     
     func roundViewCorners(){
         usernameView.layer.cornerRadius = 5.0
@@ -70,33 +67,29 @@ class LoginViewController: UIViewController {
     
     func validateUsernameAndPassword() {
 
-        let validUsername = "user@iosstudies.co"
-        let validPassword = "pinksalmon"
-            
+        username = usernameTextfield.text
+        password = passwordTextfield.text
+        
         // Check validity of username and password
         if (username != validUsername) || (password != validPassword) {
             
-            let invalidAlert = UIAlertController(title: "Invalid Username or Password", message: "Please enter a valid username and passowrd.", preferredStyle: .alert)
-            let invalidAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let alert = UIAlertController(title: "Invalid Username or Password", message: "Please enter a valid username and passowrd.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
             
-            invalidAlert.addAction(invalidAction)
-            present(invalidAlert, animated: true)
+            alert.addAction(action)
+            present(alert, animated: true)
         }
         
         // Both username and password are valid - go to MenuViewController
         else {
-            let validAlert = UIAlertController(title: "Login Successful", message: "Successfully logged in!", preferredStyle: .alert)
-            let validAction = UIAlertAction(title: "OK", style: .default, handler: {(_) -> Void in self.navigationController!.pushViewController(MenuViewController(), animated: true)})
+            let validAlert = UIAlertController(title: "Login Successful", message: "Function duration: \(runtime)", preferredStyle: .alert)
+            let validAction = UIAlertAction(title: "OK", style: .default, handler: {(_) -> Void in
+                    self.navigationController!.popViewController(animated: true)
+            })
             
             validAlert.addAction(validAction)
             present(validAlert, animated: true)
         }
 
     }
-    
-//    func validateUsername(_ email: String) -> Bool {
-//        let emailRegex = "^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\\.[a-z]{2,}$"
-//        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: email)
-//    }
-//
 }
