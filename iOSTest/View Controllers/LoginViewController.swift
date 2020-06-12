@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
     var password:String?
     let validUsername = "user@iosstudies.co"
     let validPassword = "pinksalmon"
-    var runtime = 0
+    var runtime:Double = 0.0
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
         validateUsernameAndPassword()
         
         let endTime = CACurrentMediaTime()
-        runtime = Int(endTime - startTime)
+        runtime = (1000 * (endTime - startTime))
     }
     
     // MARK: - Actions
@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
         
         // Both username and password are valid - go to MenuViewController
         else {
-            let validAlert = UIAlertController(title: "Login Successful", message: "Function duration: \(runtime)", preferredStyle: .alert)
+            let validAlert = UIAlertController(title: "Login Successful", message: "Function duration: \(runtime) ms", preferredStyle: .alert)
             let validAction = UIAlertAction(title: "OK", style: .default, handler: {(_) -> Void in
                     self.navigationController!.popViewController(animated: true)
             })
