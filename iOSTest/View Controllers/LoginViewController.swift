@@ -31,7 +31,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameView: UIView!
     @IBOutlet weak var passwordView: UIView!
     
-    private var client = LoginClient()
     var username:String?
     var password:String?
     let validUsername = "user@iosstudies.co"
@@ -44,6 +43,9 @@ class LoginViewController: UIViewController {
         
         title = "Login"
         roundViewCorners()
+        
+        // Hide the password as it is typed in
+        passwordTextfield.isSecureTextEntry = true
     }
     
     // MARK: - IBActions
@@ -73,15 +75,16 @@ class LoginViewController: UIViewController {
         // Check validity of username and password
         if (username != validUsername) || (password != validPassword) {
             
-            let alert = UIAlertController(title: "Invalid Username or Password", message: "Please enter a valid username and passowrd.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let invalidAlert = UIAlertController(title: "Invalid Username or Password", message: "Please enter a valid username and passowrd.", preferredStyle: .alert)
+            let invalidAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             
-            alert.addAction(action)
-            present(alert, animated: true)
+            invalidAlert.addAction(invalidAction)
+            present(invalidAlert, animated: true)
         }
         
         // Both username and password are valid - go to MenuViewController
         else {
+            
             let validAlert = UIAlertController(title: "Login Successful", message: "Function duration: \(runtime) ms", preferredStyle: .alert)
             let validAction = UIAlertAction(title: "OK", style: .default, handler: {(_) -> Void in
                     self.navigationController!.popViewController(animated: true)
