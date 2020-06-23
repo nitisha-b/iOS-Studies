@@ -22,10 +22,21 @@ class ChatTableViewCell: UITableViewCell {
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var header: UILabel!
     @IBOutlet weak var body: UILabel!
+    @IBOutlet weak var chatBubbleView: UIView!
     
     // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        // Make the avatar image round
+        avatar.layer.cornerRadius = avatar.frame.width / 2
+        avatar.clipsToBounds = true
+        
+        // Create a chat bubble
+        chatBubbleView.layer.cornerRadius = 7.0
+        chatBubbleView.layer.masksToBounds = true
+        chatBubbleView.layer.borderWidth = 0.1
+        chatBubbleView.layer.borderColor = UIColor.gray.cgColor        
     }
     
     // MARK: - Public

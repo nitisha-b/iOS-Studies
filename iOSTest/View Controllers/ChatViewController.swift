@@ -42,12 +42,19 @@ class ChatViewController: UIViewController {
     }
     
     // MARK: - Private
-       private func configureTable(tableView: UITableView) {
-           tableView.delegate = self
-           tableView.dataSource = self
-           tableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
-           tableView.tableFooterView = UIView(frame: .zero)
-       }
+    private func configureTable(tableView: UITableView) {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
+        tableView.tableFooterView = UIView(frame: .zero)
+        
+        // Self sizing TableView cells
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100.0
+            
+        // Disable row selection
+        tableView.allowsSelection = false
+    }
     
 }
 
@@ -72,8 +79,8 @@ extension ChatViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension ChatViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 58.0
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 58.0
+//    }
 
 }
